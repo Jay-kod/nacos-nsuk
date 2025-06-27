@@ -1,0 +1,292 @@
+/*--------------------------------------------------------------
+# Hero Banner
+--------------------------------------------------------------*/
+.hero-banner {
+    background: linear-gradient(rgba(3, 60, 9, 0.7), rgba(3, 60, 9, 0.7)), url('../images/events-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 120px 0;
+    color: var(--white);
+}
+
+.hero-banner h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-banner p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/*--------------------------------------------------------------
+# Events Page
+--------------------------------------------------------------*/
+.events .section-header {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.events #events-flters {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 0;
+    border-radius: 50px;
+    padding: 2px 15px;
+    background: var(--secondary);
+}
+
+.events #events-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    margin: 0 3px 10px 3px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+}
+
+.events #events-flters li:hover,
+.events #events-flters li.filter-active {
+    color: var(--white);
+    background: var(--primary);
+}
+
+.events .events-container {
+    position: relative;
+    min-height: 400px;
+}
+
+/* Updated Event Card Layout */
+.events .event-card {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.events .event-card .card-img {
+    width: 40%;
+    height: auto;
+    min-height: 200px;
+    flex-shrink: 0;
+}
+
+.events .event-card .card-body {
+    width: 60%;
+    padding: 20px;
+}
+
+.events .event-card .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.events .event-card:hover .card-img img {
+    transform: scale(1.03);
+}
+
+.events .event-card .card-img .event-date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ffc107;
+    color: var(--text-dark);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.events .event-card .card-img .event-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.events .event-card .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.events .event-card .card-text {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.events .event-card .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.events .event-card .card-meta .category {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.events .event-card .btn-details {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.events .event-card .btn-details:hover {
+    color: var(--secondary);
+}
+
+.events .event-card .btn-details i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.events .event-card:hover .btn-details i {
+    transform: translateX(5px);
+}
+
+/* Maintain hover effects */
+.events .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/*--------------------------------------------------------------
+# Upcoming Events Section
+--------------------------------------------------------------*/
+.upcoming-events {
+    padding: 60px 0;
+}
+
+.upcoming-events .section-header {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.upcoming-events .upcoming-event {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.upcoming-events .upcoming-event-img {
+    width: 40%;
+}
+
+.upcoming-events .upcoming-event-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upcoming-events .upcoming-event-info {
+    width: 60%;
+    padding: 20px;
+}
+
+.upcoming-events .upcoming-event-info h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.upcoming-events .upcoming-event-info p {
+    margin-bottom: 10px;
+}
+
+.upcoming-events .upcoming-event-info .fa-calendar-alt {
+    margin-right: 5px;
+    color: var(--primary);
+}
+
+.upcoming-events .upcoming-event-item {
+    display: flex;
+    align-items: flex-start;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.upcoming-events .upcoming-event-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-events .upcoming-event-item .date {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    background: var(--secondary);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-right: 20px;
+    line-height: 1.2;
+}
+
+.upcoming-events .upcoming-event-item .date span {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.upcoming-events .upcoming-event-item .details h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.upcoming-events .upcoming-event-item .details h3 a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.upcoming-events .upcoming-event-item .details h3 a:hover {
+    color: var(--primary);
+}
+
+.upcoming-events .upcoming-event-item .details p {
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.upcoming-events .upcoming-event-item .details span {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-right: 15px;
+}
+
+.upcoming-events .upcoming-event-item .details span i {
+    color: var(--primary);
+    margin-right: 5px;
+}

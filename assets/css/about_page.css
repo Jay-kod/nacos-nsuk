@@ -1,0 +1,716 @@
+/* TEST STYLES - Can be removed after verification */
+body { background-color: #f8f9fa !important; }
+#our-objectives { background-color: #f8f9fa !important; }
+#our-objectives .section-title { color: #1a472a !important; }
+
+/*
+============================================
+    About Page Styles
+    ----------------------------------------
+    - Header Section
+    - Who We Are Section
+    - Hero Section
+    - Our Story Section
+    - Values Section
+    - Team Section
+    - Our Objectives Section
+    - Responsive Styles
+============================================
+*/
+
+/* ===== Header Section ===== */
+.about-header {
+    height: 60vh;
+    min-height: 400px;
+    background-image: url('../../images/slider/slide1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(9, 97, 30, 0.8) 0%, rgba(9, 97, 30, 0.9) 100%);
+    z-index: 1;
+}
+
+.about-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.about-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.about-header p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+/* ===== Who We Are Section ===== */
+#who-we-are .card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    will-change: transform, box-shadow;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#who-we-are .card:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+#who-we-are .col-lg-4 {
+    min-height: 300px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+#who-we-are .card:hover .object-fit-cover {
+    transform: scale(1.1);
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.object-fit-cover {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#who-we-are .col-lg-8 {
+    position: relative;
+    z-index: 2;
+    transition: all 0.6s ease-out;
+    padding: 2rem !important;
+}
+
+#who-we-are .card:hover .col-lg-8 {
+    transform: translateX(8px);
+}
+
+#who-we-are h2 {
+    color: #1a472a;
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 700;
+    transition: all 0.4s ease;
+}
+
+#who-we-are h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: #28a745;
+    border-radius: 2px;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#who-we-are .card:hover h2::after {
+    width: 100px;
+    background: #1e7e34;
+}
+
+#who-we-are p {
+    color: #4a4a4a;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateY(15px);
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+#who-we-are .card:hover p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ===== Hero Section ===== */
+.about-hero {
+    background: linear-gradient(135deg, #0f4c75 0%, #1b262c 100%);
+    color: #ffffff;
+    padding: 120px 0 100px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(31, 128, 29, 0.15) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(31, 128, 29, 0.15) 0%, transparent 30%);
+    z-index: -1;
+    animation: gradientPulse 15s ease infinite;
+}
+
+.about-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+}
+
+.about-hero .lead {
+    font-size: 1.4rem;
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    position: relative;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.about-hero-img {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: float 6s ease-in-out infinite;
+    border: 10px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.about-hero-img:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* ===== Our Story Section ===== */
+.our-story {
+    padding: 100px 0;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.our-story .container {
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Values Section ===== */
+.values-section {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.value-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--primary);
+}
+
+.value-icon {
+    width: 90px;
+    height: 90px;
+    background: rgba(15, 76, 117, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    color: var(--primary);
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    background: var(--primary);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.value-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.value-card p {
+    color: var(--text-light);
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* ===== Team Section ===== */
+.team-section {
+    padding: 100px 0;
+    background: #ffffff;
+    position: relative;
+}
+
+.team-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 30px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.team-card .card-img-top {
+    height: 320px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.team-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.team-card .card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.team-card .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.team-card .card-text {
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 1.5rem;
+}
+
+.team-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: var(--primary);
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.team-social a:hover {
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Our Objectives Section ===== */
+#our-objectives {
+    padding: 5rem 0 !important;
+    background-color: #f8f9fa !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.objective-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: none;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Different background colors for each card */
+.objective-card-1 {
+    background: linear-gradient(135deg, #e6f7ed 0%, #c8f0d8 100%);
+}
+
+.objective-card-2 {
+    background: linear-gradient(135deg, #d4edda 0%, #b1dfbb 100%);
+}
+
+.objective-card-3 {
+    background: linear-gradient(135deg, #c3e6cb 0%, #9fd5ac 100%);
+}
+
+.objective-card-4 {
+    background: linear-gradient(135deg, #b1dfbb 0%, #8fcca9 100%);
+}
+
+.objective-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.objective-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: #fff;
+    font-size: 1.8rem;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Different icon colors for each card */
+.objective-card-1 .objective-icon {
+    background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
+}
+
+.objective-card-2 .objective-icon {
+    background: linear-gradient(135deg, #1e7e34 0%, #1a7431 100%);
+}
+
+.objective-card-3 .objective-icon {
+    background: linear-gradient(135deg, #1a7431 0%, #155d27 100%);
+}
+
+.objective-card-4 .objective-icon {
+    background: linear-gradient(135deg, #155d27 0%, #0f4b1f 100%);
+}
+
+.objective-card:hover .objective-icon {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.objective-card h3 {
+    color: #1a472a;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.objective-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #28a745;
+    transition: all 0.3s ease;
+}
+
+.objective-card:hover h3::after {
+    width: 60px;
+    background: #fff;
+}
+
+.objective-card p {
+    color: #495057;
+    line-height: 1.7;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.objective-card:hover h3,
+.objective-card:hover p {
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effects for each card */
+.objective-card-1:hover {
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+}
+
+.objective-card-2:hover {
+    background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
+}
+
+.objective-card-3:hover {
+    background: linear-gradient(135deg, #1e7e34 0%, #1a7431 100%);
+}
+
+.objective-card-4:hover {
+    background: linear-gradient(135deg, #1a7431 0%, #155d27 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199.98px) {
+    .objective-card {
+        padding: 2rem 1.25rem;
+    }
+    
+    .objective-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.6rem;
+    }
+    
+    .objective-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #our-objectives {
+        padding: 4rem 0;
+    }
+    
+    #our-objectives .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #our-objectives {
+        padding: 3.5rem 0;
+    }
+    
+    #our-objectives .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .objective-card {
+        margin-bottom: 1.5rem;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199.98px) {
+    .about-header h1 {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .about-hero {
+        text-align: center;
+        padding: 100px 0 60px;
+    }
+    
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-hero .lead {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .about-hero-img {
+        margin-top: 50px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-hero h1 {
+        font-size: 2.25rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .value-card, .team-card {
+        margin-bottom: 30px;
+    }
+    
+    .team-card {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about-hero {
+        padding: 80px 0 40px;
+    }
+    
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .about-hero .lead {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .value-card {
+        padding: 1.75rem 1.5rem;
+    }
+    
+    .value-icon {
+        width: 75px;
+        height: 75px;
+        font-size: 2rem;
+    }
+    
+    .team-card .card-img-top {
+        height: 280px;
+    }
+}
+
+/* ===== Animations ===== */
+@keyframes gradientPulse {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
